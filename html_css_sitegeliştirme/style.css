@@ -1,0 +1,505 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    /* DİĞER ÖĞELERE REM CİNSİNDEN BU FONT-SİZE GÖRE AYARLAMA YAPMAK İSTİYORUZ ÇÜNKÜ */
+    /* Mobil tasarım için 6px olarak değiştirelim .10px fazla çünkü */
+    /* font-size: 10px; */
+    font-size: 6px;
+}
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.6rem;
+    background-color: #fff;
+  
+}
+/*************** NAVBAR ***********/
+nav{
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    background-color: #2C3E4F;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    /* MENU ÇUBUĞUNUN ,SAYFA KAYDIRILSA BİLE DAİMA YUKARDA KALMASINI İSTEDİĞİMİZ İÇİN POSİTİON:FİXED OLARAK KULLLANDIK VE GENİŞLİĞİ 100% YAPTIK*/
+    position: fixed;
+    width: 100%;
+    /* EKRANI AŞAĞI-YUKARI KAYDIRDIĞIMIZDA YILDIZ ,MENU KISMINDA ÇIKIYORDU.ONU ENGELLEMEK İÇİN Z-İNDEX KULLANDIK */
+    z-index: 600;
+
+}
+.container{
+                   /* BREAKPOİNT */
+    /* width: 1140px;  RESPONSİVE AYARLARI YAPARKEN BUNU 100% YAPICAZ YANİ DEĞİŞTİRİYORUZ*/
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;  
+    margin-right: 0.5rem;  
+}
+.col{
+    /* KUTULAR SOLA YASLI,GENİŞ EKRANDA 3 TANE SIĞACAK ŞEKİLDE VE 10PX LİK PADDİNG */
+    float: left;
+    /* width: 33.333%; */
+    width: 100%;
+    /* padding: 10px; */
+    padding: 1rem;
+   
+}
+/************ BREAKPOİNTS **********/
+/************* İÇERİĞE(RESİM,YAZI,VS.) RESPONSİVE EKLEMEK ***************/
+
+
+@media (min-width: 576px){
+     .container{
+                 /* 540 YAPTIK ÇÜNKÜ BOŞLUK BIRAKTIK KENARLARDAN */
+        max-width: 540px;
+     }
+     html{
+        font-size: 7px;
+     }
+}
+@media (min-width: 768px){
+      .container{
+        max-width: 732px;
+      }
+      html{
+        font-size: 8px;
+      }
+      .col{
+        /* EKRANA 2 RESİM SIĞACAK ŞEKİLDE */
+        width: 50%;
+      }
+}
+@media (min-width: 992px){
+    .container{
+        max-width: 960px;
+      }
+      html{
+        font-size: 9px;
+      }
+      .col{
+        /* ekrana sırayla 3 tane sığaca şekilde */
+        width: 33.333%;
+      }
+
+}
+@media (min-width: 1200px){
+    .container{
+        max-width: 1180px;
+      }
+      html{
+        font-size: 10px;
+      }
+}
+
+#logo-box .logo{
+    color: #fff;
+    font-size: 2.2rem;
+    font-weight: 700;
+
+}
+a{
+    text-decoration: none;
+}
+/* YAZININ TÜM HARFLERİNİ BÜYÜK YAZMAK İÇİN KULLANDIK */
+.text-uppercase{
+    text-transform: uppercase;
+}
+#nav-links{
+    /* SAĞA YASLI ŞEKİLDE DURACAK LİNKLER */
+    float: right;
+}
+#logo-box{
+    float: left;
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+}
+.clear::after{
+    content: " ";
+    display: block;
+    clear: both;
+}
+#nav-links .nav-item{
+    /* sola yaslı şekilde yan yana gelicek linkler */
+    float: left;
+    margin: 1.5rem;
+    color: #fff;
+    /* madde işaretlerini silmek için */
+    list-style-type: none;
+
+}
+#nav-links .nav-link{
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 2rem;
+    letter-spacing: 0.1rem;
+    /* Linkin üstüne geldiğimizde 0.4s hızında renk değişimi olucak */
+    transition: all 0.4s;
+}
+/* Linklerin üstüne gelindiğinde */
+#nav-links .nav-link:hover{
+    color: teal;
+}
+#nav-links .nav-icon{
+    /* görünür özelliğini kapattık yani gizledik none yaparak */
+    display: none;
+}
+@media (max-width : 992px){
+      #logo-box{
+        float: none; 
+        text-align: left;
+      }
+      #nav-links{
+        float: none;
+        text-align: left;
+      }
+      #nav-links .nav-link{
+        font-size: 2rem;
+        text-align: left;
+        padding-left: 0;
+        line-height: 4rem;
+      }
+      #nav-links .nav-item{
+        /* ALT ALTA GELMESİ İÇİN */
+        float: none;
+        text-align: left;
+       
+      }
+      #nav-links .nav-icon{
+        /* ICONUMUZ GÖRÜNDÜ */
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 3rem;
+      }
+}
+
+
+/* ************** HEADER KISMI ************** */
+header .container{
+    background-color: #1ABC9B;
+    height: 700px;
+    width: 100%;  
+    text-align: center;
+    padding-top: calc(106px + 7rem);
+    /* transform: translate(-50%,-50); */
+}
+.img-foto{
+    /* FOTONUN MAX BOYUTUNU VERDİK */
+  max-width: 240px;
+
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat', sans-serif;
+}
+header h1{
+    color: #fff;
+    font-size: 5rem;
+    font-weight: 700;
+    padding-top: 1rem;
+}
+.star-light{
+    /* ÜSTÜN VE ALTTAN 4REM LİK BOŞLUK VE SAĞDAN VE SOLDAN AUTO YAPTIK ORTAYA GELSİN DİYE. */
+    margin: 6rem auto;
+    border: none; 
+    /* ÇİZGİNİN KALINLIĞINI RENGİNİ FALAN VERDİK */
+    border-top: 0.4rem #fff solid;
+    /* BÖYLE PADDİNG DEĞERİ VEREREK İÇİNİ BOŞ YAPTIK */
+    /* padding: 0.5rem; */
+    /* İÇİNİ BOŞ YAPTIKTAN SONRA, SADECE TOP YANİ ÜST KISMINI ALICAZ .O YÜZDEN BORDER-TOP OLARAK DEĞİŞTİRELİM*/
+    /* MAX-WİDTH, BOYUTUNU VERDİK YANİ UZUNLUĞUNU.VE BÖYLE YAPINCA ÇİZGİMİZ KISALDI */
+    max-width: 25rem;
+    border-radius: 0.5rem;
+    /* YILDIZI GÖRÜNÜR YAPTIK VİSİBLE İLE */
+    overflow: visible;
+    /* ÇİZGİNİN KENARLARINI DÜZELTMEK İÇİN YILDIZLA ARASINDAKİ YÜKSEKLİĞİ 0 YAPTIK */
+    height: 0;
+}
+/* YILDIZI EKLERKEN,CLEAR MATIĞI İLE  */
+.star-light::after{
+    /* star unicode'dan yıldız */
+    content: "★";
+    color: #fff;
+    font-weight: 900;
+    font-size: 3.8rem;
+    /* YILDIZI YUKARI ÇİZGİNİN ORAYA ÇIKARMAK İÇİN */
+    position: relative;
+    top: -15px;
+    /* YILDIZ İLE ÇİZGİNİN ARASINA BOŞLUK VERMEK İÇİN BACKGROUND VE PADDİNG DEĞERLERİ VERMELİYİZ */
+    background-color: #1ABC9B;
+    padding: 0px 10px;
+}
+header h2{
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 400;
+}
+/***************** PORTFOLİO ******************/
+#portfolio{
+    background-color:#fff;
+    /* height: 500px; */
+    width: 100%; 
+    text-align: center;  
+    padding: 10rem 10rem; 
+   
+
+}
+#portfolio h2{
+    color: #2C3E4F;
+    font-size: 5rem;
+ 
+}
+.star-dark{
+    margin: 6rem auto;
+    border: none;
+    border-top: 0.5rem #2C3E4F solid;
+    /* padding: 0.5rem;  */
+    max-width: 250px;
+    border-radius: 0.5rem;
+    overflow: visible;
+    height: 0;
+}
+.star-dark::after{
+    content: "★";
+    color: #2C3E4F;
+    font-size: 4rem;
+    font-weight: 900;
+    position: relative;
+    top: -15px;
+    background-color:#fff ;
+    padding: 0 0.8rem;
+}
+/************* PORTFOLİO İMAGES ***********
+.col{
+    /* KUTULAR SOLA YASLI,GENİŞ EKRANDA 3 TANE SIĞACAK ŞEKİLDE VE 10PX LİK PADDİNG
+    float: left;
+    width: 33.333%;
+    padding: 10px;
+   
+}*/
+
+/* KUTULAR AYRI AYRI OLUYOR YANİ BOŞLUK OLLUYOR ARALARINDA.
+        ----GEÇİCİ OLARAK VERDİK YÜKSEKLİK İLE BACKGROUND RENGİNİ
+ .portfolio-item{ 
+     background-color: #1ABC9B; 
+     height: 250px; 
+ } */
+ /* FOTONUN KALİTESİ BOZULMASIN DİYE BÖYLE TERCİH EDİLİRMİS. */
+ .img-foto2{
+    max-width: 100%;
+    height: auto;
+ }
+ /************** GÖRSELLERE OVERLAY EKLENMESİ *************/
+ /* RESİM İLE İCON ÜSTÜSTE GELDİĞİ İÇİN KONUM OLARAK BAZI DEĞİŞİKLER YAPILMASI GEREK  */
+.portfolio-item{
+    position: relative;
+}
+.portfolio-item img{
+    display: block;
+    border-radius: 15px;
+}
+.img-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1ABC9B;
+    /* ICONUN GÖRÜNÜRLÜĞÜ */
+    opacity: 0; 
+    transition: 0.5s;
+}
+.img-overlay .icon{
+    color: #fff;
+    font-size: 9rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  /* ICONU ORTAYA ALMAK İÇİN */
+  transform: translate(-50% ,-50%);
+  
+}
+.portfolio-item:hover .img-overlay{
+    opacity: 0.7;
+    border-radius: 15px;
+}
+
+/************ ABOUT BÖLÜMÜ **********/
+#about{
+    background-color: #1ABC9B;
+    height: 400px;
+    width: 100%; 
+    text-align: center; 
+    padding-top: 10rem ; 
+    margin-top: 10rem;
+    color: #fff;
+
+}
+#about h2{
+    font-size: 4.4rem;
+}
+#about-text .left{
+    /* float: left; */
+    /* MOBİL TASARIM İÇİN NONE YAPTIK */
+    float: none;
+    /* width: 50%;   Genişliği de 100% */
+    width: 100%;
+    /* padding-left: 25rem; */
+    padding-left: 25px;
+    /* padding-right: 2rem; */
+    padding-right: 5px;
+}
+#about-text .right{
+    float: none;
+    width: 100%;
+    padding-right: 5px ;
+    padding-left: 25px;
+}
+@media (min-width: 992px) {
+    #about-text .left {
+        float: left;
+        width: 50%;
+        padding-right: 10px;
+        padding-left: 210px;
+    }
+
+    #about-text .right {
+        float: right;
+        width: 50%;
+        padding-right: 210px;
+        padding-left: 10px;
+    }
+}
+#about-text p{
+    font-size: 2rem;
+}
+
+
+
+.btn{
+    margin: 1rem;
+    padding: 1.3rem 1rem;
+    border: #fff solid 2px;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: inline-block;
+    background-color: transparent;
+    color: #fff;
+    /* EL İŞARETİNDE İMLEÇ */
+    cursor: pointer;
+    /* ALL: TÜM ÖGELERİ KAPSAYACAK ŞEKİLDE DEMEK */
+    transition: all 0.4s;
+}
+.btn-social{
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  list-style: none;
+  font-size: 2.2rem;
+  line-height: 2rem;
+
+}
+.btn:hover{
+    color: #2C3E4F;
+    background-color: #fff;
+}
+.btn-2{
+    margin: 2rem;
+    padding: 1.3rem 1.7rem;
+    border: #1ABC9B solid 2px;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #1ABC9B;
+    cursor: pointer;
+}
+.btn-2:hover{
+  background-color: #128f76;
+  border-color:#128f76 ;
+
+}
+/******** CONTACT ME ********/
+
+#contact h2{
+    font-size: 4.4rem;
+    color: #2C3E4F;
+    margin-top: 10rem;
+    text-align: center;
+ 
+}
+#contact-form{
+  width: 70%;
+  text-align: left;
+  margin: 0 auto;
+}
+ #contact hr{
+    max-width: 200px;
+}
+.form-group{
+     border-bottom: 1px solid #e9ecef;
+     max-width: 900px;
+     padding-bottom: .3rem; 
+     margin-bottom: 3rem; 
+     
+}
+.form-group input, .form-group textarea{
+    border: none;
+    font-size: 2.5rem;
+    width: 100%;
+    display: block;
+}
+.form-group input:focus{
+    outline: 0;
+}
+.form-group textarea:focus{
+    outline: 0;
+}
+/******** FOOTER  **********/
+footer{
+    margin-top: 8rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color:#041220;
+    color: #fff;
+   
+}
+footer h4{
+    font-size: 2.3rem;
+}
+footer p{
+    font-size: 1.5rem;
+    margin-top: 1.2rem;
+}
+.col #list{
+    list-style: none;
+    display: inline-block;
+ 
+}
+.copyright{
+    background-color: #01080f;
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    height: 70px;
+    padding: 2rem 10rem;
+
+
+}
+
+ 
+
+
+
+
+
+
+
+

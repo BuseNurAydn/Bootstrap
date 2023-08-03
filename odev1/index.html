@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firma-Üye Ol</title>
+
+  <link rel="stylesheet" href="style.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div id="başlik">
+    <h1>Üye Ol</h1>
+    <hr>
+  </div>
+
+  <div id="içerik">
+     <nav class="menü">
+           <ul>
+                 <li><a href="index.html"> Üye Ol </a></li>
+                 <li><a href="index2.html"> Üye Girişi </a></li>
+           </ul>
+      </nav>
+   
+    <main>
+      <h3 id="altbaşlık">Üye Bilgileri</h3>
+      <form action="">
+        <label> Ad Soyad: </label> <br>
+        <input type="text" name="firstname" class="çubuk">
+        <br>
+        <label> Firma Adı: </label><br>
+        <input type="text" name="firma" class="çubuk">
+        <br>
+        <label> Telefon: </label><br>
+        <input type="text" name="number" maxlength="10" class="çubuk">
+        <br>
+        <label> E-posta: </label><br>
+        <input type="email" name="e posta" class="çubuk">
+        <br>
+        <label> Şifre: </label><br>
+        <input type="password" name="parola" class="çubuk" size="10">
+        <br>
+        <label> Şifre(Tekrar): </label><br>
+        <input type="password" name="parola" class="çubuk" size="10">
+        <br>
+        <label> Şifreyi Hatırla: </label>
+        <input type="checkbox" name="sifreyi hatırla">
+        <br><br>
+        <label> Cinsiyetiniz: </label>
+        <input type="radio" name="cinsiyet"> Erkek
+        <input type="radio" name="cinsiyet"> Kız
+        <br><br>
+        <label> Yaşadığınız İl: </label>
+        <select name="il">
+          <option> Ankara </option>
+          <option> İstanbul </option>
+          <option> Sinop </option>
+          <option> İzmir </option>
+          <option> Konya </option>
+          <option> Çankırı </option>
+          <option> Rize </option>
+          <option> Diger </option>
+        </select>
+        <br><br>
+        <a href="index.html"><input type="button" value="Üye Ol" class="btn"></a>
+      </form>
+
+    </main>
+  </div>
+  
+  <div class="footer">
+    <p>Tüm hakları saklıdır. &copy; </p>
+  </div>
+
+ 
+
+  
+
+</body>
+
+</html>

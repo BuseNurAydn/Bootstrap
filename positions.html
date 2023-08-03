@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positions Kullanımı</title>
+
+    <style>
+        .kutu {
+            width: 150px;
+            height: 150px;
+        }
+
+        #kutu1 {
+            background: fuchsia;
+            width: 100%;
+            height: 40px;
+            position: sticky;
+            top: 0px;  
+
+        }
+
+        #kutu2 {
+            background: darkgrey;
+            /*  position: absolute;
+                top: 50px;
+                left: 60px; */
+
+        }
+
+        #kutu3 {
+            background: salmon;
+            /*  position: relative;
+                top: 10px;
+                left: 30px; */
+
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet veritatis eligendi hic, in consequuntur
+        similique cumque fugit nisi quaerat maiores magni tempore suscipit error corporis. Sapiente ipsam vitae quos
+        aperiam!</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium quisquam non provident ratione beatae, iste
+        natus delectus doloremque sequi magni?</p>
+
+
+
+    <div id="kutu1" class="kutu">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, animi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet veritatis eligendi hic, in consequuntur
+        similique cumque fugit nisi quaerat maiores magni tempore suscipit error corporis. Sapiente ipsam vitae quos
+        aperiam!</div>
+    <div id="kutu2" class="kutu">Kutu 2</div>
+    <div id="kutu3" class="kutu">Kutu 3</div>
+    <div style="height: 3000px;"></div> 
+
+</body>
+
+</html>

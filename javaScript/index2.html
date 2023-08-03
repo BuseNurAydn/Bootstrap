@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deneme</title>
+
+</head>
+<body>
+   <!-- <script src="index2.js" type="text/Javascript"></script> -->
+
+   <!-- 1
+   <h1>My Web Page</h1>
+   <p id="demo"> A Paragraph </p>
+   <button type="button" onclick="myFunction() ">Try it</button>
+
+<script>
+    function myFunction(){
+        document.getElementById("demo").innerHTML= "My First JavaScript Function";
+    }
+</script>
+-->
+
+<!-- 2
+<h1>My First Web  Page</h1>
+<script>
+    document.write("<p> My First JavaScript </p>");
+</script>
+-->
+
+<!-- 3
+<h1>Pozitif sayıların toplanması</h1>
+
+<script>
+    var sum=0;
+    var num;
+    num = prompt("Sayi giriniz:");
+    while(num != 0){
+        if(num>0){
+            sum += parseInt(num);
+        }
+        else{
+            num = prompt("Sayi giriniz:");
+        }
+    }
+    alert("Sum = " + sum);
+</script>
+-->
+
+<!-- 4
+<h1>Selamlar</h1>
+
+<script>
+    var simdi = new Date();
+    var saat = simdi.getHours();
+
+    if(saat<10){
+        selam = "Günaydın";
+    }else if(saat<20){
+        selam = "İyi Günler";
+    }else{
+        selam = "İyi Akşamlar";
+    }
+    alert(selam);
+</script>
+-->
+
+<!-- 5
+<h1>For Döngüsü</h1>
+
+<script>
+var arabalar = ["BMW","Mercedes","Volvo","Ford","Kangoo"];
+     for(var i =0;i<=arabalar[i].length;i++){
+         document.write(arabalar[i] + "<br>");
+     }
+</script>
+-->
+
+<!-- 6
+<h1>While Döngüsü</h1>
+
+<script>
+    var sum = 0;
+    var i = 1;
+    var x= "";
+    while(i<10){
+        sum = sum + i;
+        x = x + i + "'e kadar toplam " + sum + " dir <br>";
+        i++;
+    }
+    document.write(x);
+</script>
+-->
+
+<!-- 7
+<h1>For Döngüsü</h1>
+<script>
+    for(var i=0;i<10;i++){
+        x ="Satır sayısı "+ i + "dir<br>";
+        if(i==3) break;
+    } 
+    document.write(x);
+ 
+</script>
+-->
+
+<!-- 8
+<h1>Break</h1>
+<script>
+    var arabalar =["BMW","Volvo","Kangoo","Ford"];
+    liste:{
+    document.write(arabalar[0] + "<br>");
+    document.write(arabalar[1] + "<br>");
+    document.write(arabalar[2] + "<br>");
+    break liste;
+    document.write(arabalar[3] + "<br>");
+    }
+</script>
+-->
+
+<!-- 9
+<h1>Ortalama</h1>
+<script>
+    var sum = 0;
+    var dizi = [1,3,4,2,5,6,2,3,4];
+    for(i = 0;i<dizi.length;i++){
+        sum = sum + dizi[i];
+    }
+    alert("Ortalama : " + sum/dizi.length);
+</script>
+-->
+
+<!-- 10
+<h1>Fonksiyon</h1>
+
+<button onclick="myFunction('Harry Potter','Sihirbaz')"> Try it </button>
+<button onclick="myFunction('Bob','İnşaatçı')"> Try it </button>
+
+<script>
+    function myFunction(isim,is){
+        alert("Hoşgeldin " + isim + ", "+ is);
+    }
+</script>
+-->
+
+<!-- 11
+<h1>Fonksiyon 2</h1>
+<p id="demo"></p>
+
+<script>
+    function myFunction(a,b){
+        return a*b;
+    }
+    document.getElementById("demo").innerHTML=myFunction(4,3);
+</script>
+-->
+
+<!-- 12
+<input type="text" id="num1" value="2"><br>
+<input type="text" id="num2" value="4"><br>
+<button onclick=""> Click Me</button>
+
+<p id="demo"></p>
+
+<script>
+    function myFunction(){
+        var num1Element = document.getElementById("num1");
+        var num2Element = document.getElementById("num2");
+
+        var res = num1Element.value * num2Element.value
+        document.getElementById("demo").innerHTML = res;
+    }
+</script>
+-->
+
+<!-- 13
+<h2>Lorem ipsum dolor sit amet.</h2>
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem vero sed eligendi totam ciatis.</p>
+<p id="demo"></p>
+
+<script>
+    Array.prototype.myUcase = function(){
+        for(let i=0 ; i<this.length;i++){
+            this[i] = this[i].toUpperCase();
+        }
+    };
+    const fruits =["Banana","Orange","Apple","Mango"];
+    fruits.myUcase();
+    document.getElementById("demo").innerHTML = fruits;
+</script>
+
+-->
+
+<!-- 14
+<h1>Pencere Bilgileri</h1>
+
+<script>
+    document.write("Name: " + window.name + "<br>")
+    document.write("Width: " + window.innerWidth +"<br>")
+    document.write("Height: " + window.innerHeight +"<br>" )
+    document.write("ScreenX: "+ window.screenX  +"<br>")
+    document.write("ScreenY: "+ window.screenY +"<br>")
+</script>
+-->
+
+<!-- 15
+<script>
+    var buseAydin = new Object();
+    buseAydin.isim = "Buse";
+    buseAydin.soyisim = "Aydın";
+    buseAydin.yas = 21;
+    buseAydin.ogrenciMi = function(){
+        if(this.yas<30){
+            return "Ogrenci";
+        }else{
+            return "Ogrenci değil";
+        }
+    }
+    document.write(buseAydin.ogrenciMi())
+</script>
+-->
+<!-- 16
+<script>
+    function kayit (isim,soyİsim,yas){
+        this.isim=isim;
+        this.soyİsim=soyİsim;
+        this.yas=yas;
+        this.emeklimi = emeklimi;
+        function emeklimi(){
+            if (this.yas>65) {
+                return "Emekli";
+            }else{
+                return "Emekli değil";
+            }
+        }
+    }
+    buseAydin = new kayit("Buse","Aydın",30);
+    document.write(buseAydin.emeklimi())
+</script>
+-->
+
+<!-- 17
+<script>
+    function clear(){
+          var x = document.getElementsByName("x");
+          for(var i=0; x.length;i++){
+            x[i].value= "";
+          }
+    }
+
+
+</script>
+
+Cats: <input type="text" name="x" value="Cats">
+Dogs: <input type="text" name="x" value="Dogs">
+<input type="button" value="Clear fields" onclick="clear()">
+
+-->
+
+<!-- 18
+<button onclick="myFunction()">Dene</button>
+
+<script>
+    function myFunction(){
+        var x = window.open();
+        w.document.open();
+        w.document.write("<h1>Hello World </h1>");
+        w.document.close();
+    }
+</script>
+-->
+
+<button onclick="myFunction()">Dene</button>
+<p id="demo"></p>
+
+<script>
+    function myFunction(){
+        var carName = "Volvo";
+        document.getElementById("demo").innerHTML=carName;
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<div id="zaman"></div>
+<script>
+function tarihSaat() {
+    var date = new Date().toLocaleString("tr-TR")
+    document.getElementById("zaman").innerHTML = date;
+}
+// her 1 saniyede tarihSaat fonksiyonunu yeniden çalıştır
+setInterval(tarihSaat, 1000); 
+</script> 
+
+-->
+</body>
+</html>

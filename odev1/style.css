@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    border: none;
+    list-style-type: none;
+}
+body{
+    background-image: url(images/foto2.jpg);
+    opacity: 0.7;
+}
+#başlik{
+    background-color:black;
+    width:100%;
+    height: 23%;
+}
+#başlik h1{
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+    padding-left: 30px;
+}
+#içerik{
+    width: 100%;
+    height: 37%;
+    background-color: #FFFFFF;
+    border-radius: 5px; 
+}
+ .menü{
+    width: 25%;
+    height: auto;
+    float: left;
+    margin-top: 130px;
+    margin-left: 30px;
+    border-radius: 5px; 
+ }
+ .menü li{
+    background-color:#ffa841;
+    margin: 10px;
+    height: 40px;
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px;
+ }
+ .menü li a {
+    color: #000000;
+    font-size: 25px;
+    line-height: 25px;
+ 
+ }
+ .menü li:hover{
+    background-color: #ffaa41c6;
+ }
+main{
+    width: 70%;
+    background-color:#ffaa41d0;
+    font-size: 20px;
+    color:black;
+    padding: 10px;
+    position: relative;
+    float: right; 
+    height: 40%;
+}
+main h3{
+    color: #000000;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+input{
+    /*VERİ GİRERKEN */
+    padding: 10px;
+    font-size: 20px;
+   
+}
+form .çubuk{
+    height: 30px;
+    width: 35%;
+    border-radius: 5px;
+}
+.btn{
+    font-size: 25px;
+    border-radius: 5px;
+    background-color: #ffaa416e;
+    padding: 10px;
+    border-radius: 5px;
+}
+.btn:hover{
+   background-color: #ffa841;
+   border-color: #ffa841;
+ 
+}
+.footer{
+    background-color: #000000;
+    text-align: center;
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    margin-top: 36rem;
+    color:white;
+    padding-top: 5px;
+}

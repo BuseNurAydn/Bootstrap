@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header .logo{
+    width: 100%;
+    height: 125px;
+    background-color: #ffffff;
+}
+#logoResim{
+    max-width: 150px;
+    margin-left: 10rem;
+    margin-top: 5px;
+}
+#iconlar i:hover{
+    font-size: 20px;
+    color: grey
+}
+section nav{
+    background-color:rgba(238, 238, 238);
+    height: 40px;
+    width: 100%;
+   
+   position: sticky;
+   top: 0;
+   z-index: 1; 
+}
+section nav ul{
+    margin-left: 10rem;
+    padding-top: 10px;
+}
+section nav ul li{
+    float: left;
+    text-decoration: none;
+    list-style-type: none;
+    margin-right: 20px;
+    
+}
+section nav ul li ul{
+    display:none;
+    position:absolute;
+    width:200px;
+}
+section nav ul li:hover ul{
+    display:block;
+    background-color:white ;  
+    margin: 10px;   
+}
+section nav li:hover ul li{
+    display: block;
+    padding: 10px;
+   
+}
+section nav ul li ul li a{
+    opacity: 0.7;
+}
+section nav ul li a {
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    position: relative;
+    text-decoration: none;
+}
+section nav ul li a:hover{
+      color: #cf2e2ed1;
+}
+
+section nav ul li a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color:#cf2e2ed1 ;
+    bottom: -1px;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s ease-in-out;
+}
+section nav ul li a:hover::before{
+   transform-origin: left;
+   transform: scaleX(1);
+}
+section nav ul #iconlar{
+    text-decoration: none;
+    float: right;
+    margin-right: 20px;
+    max-width: 50px;
+}
+section .başlık{
+    width: 100%;
+    height: 18rem;
+    background-color:rgba(238, 238, 238, 0.698) ;
+}
+section #anaBaşlık {
+    text-align: center;
+    padding-top: 7rem;
+    font-size: 40px;
+    font-weight: 700; 
+}
+section main{
+    width: 70%;
+    display: inline-block;
+}
+.içerik img{
+    width: 90%;
+    margin: 4rem;
+}
+main .yazı,h3,h1,h4{
+  margin-left: 10rem;
+  line-height: 2rem;
+  font-size: 17px;   
+  margin-bottom: 2rem;
+  
+}
+main h3,h1{
+    font-size: 28px;
+}
+h6{
+    font-size: 15px;
+}
+main .yazı ul{
+    margin-left: 10rem;
+    line-height: 2rem;
+    font-size: 17px;   
+    margin-bottom: 2rem;
+}
+.yazı li{
+    margin-left: 2rem;
+}
+.BirinciParagraf{
+    width: 50%;
+    float: left;
+}
+.İkinciParagraf{
+   float: right;
+   width: 50%;
+   
+}
+#düzen{
+    font-size: 35px;
+    float: left;
+    width: 800px;
+}
+#düzenleme{
+    max-width: 400px
+}
+#içerik1{
+    width: 300px;
+}
+footer{
+    width: 100%;
+    height: 500px;
+    opacity: 0.9;
+    margin-top: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+    color: #ffffff; 
+    background-color: black;
+}
+footer img{
+    max-width: 320px;
+}
+.col{
+   float: left;
+   margin-left: 2rem;
+   margin-right: 3rem;
+}
+footer .col ul li{
+    list-style-type: none;
+    margin-bottom: 2rem;
+   
+}
+footer .col ul li a{
+    text-decoration: none;
+    opacity: 0.6;
+    color: #ffffff;
+}
+footer .col ul li a:hover{
+   color: grey;
+}
+     
+.col h4{
+    margin-left: 0.5rem;
+  
+}
+footer .col .footerİconlar{
+    margin-left: 5rem;
+ 
+}
+footer .col .footerİconlar a{
+  margin-right: 20px;
+  color: #ffffff;
+  font-size: 25px;
+  opacity: 0.7;
+}
+.footerİconlar i:hover{
+    font-size: 30px;
+    color: gray
+}
+
+
+

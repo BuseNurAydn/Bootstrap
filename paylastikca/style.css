@@ -1,0 +1,351 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #dbdbdb;
+    font-family:'Oxygen', sans-serif;
+}
+#social{
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    font-size: 18px;
+    text-align: right;
+    
+    position: fixed;
+    top: 0;
+    z-index: 1; 
+   
+}
+font{
+    /* HARFLER ARASINDAKİ BOŞLUK İÇİN */
+    letter-spacing: 2px;
+    float: left;
+}
+span{
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+#social i{
+    margin-right: 15px;
+    font-size: 25px ;
+}
+#social i:hover{
+   color: teal;
+   cursor: pointer;
+   transition: all 0.5s;
+}
+#container{
+    width: 80%;
+    margin: auto;
+    height: auto;
+
+}
+header{
+    width: 100%;
+    height: 350px;
+    /* YAZIYI ABSOLUTE YAPINCA HEADER'I RELATİVE YAPTIK.HEADER'A GÖRE KONUMLANSIN DİYE */
+    position: relative;
+    margin-bottom: 10px;
+
+}
+#headerResim{
+    /* RESMİMİZ HEADER ALANINI KAPLASIN İSTEDİK */
+    width: 100%;
+    height: 350px;
+    border-bottom-left-radius: 20px ;
+    border-bottom-right-radius: 20px ;
+    opacity: 0.8;
+    /* GÖLGELİK İÇİN  */
+    box-shadow: 0 2px 8px 2px rgba(20, 23, 28, .15) ;
+
+}
+#centered{ 
+    color: white;
+    font-size: 20px;
+    font-family: 'Kanit', sans-serif; 
+    font-weight: 600;
+    text-align:center;
+    position: absolute;
+    top: 180px;
+    margin-left: 450px;
+    /* YA DA ŞÖYLE DE YAZABİLİRDİK 
+    top: 50%;
+    left: 50%;
+    transform:translate (-50% ,-50% ) ;
+ */
+  
+}
+section{
+    width: 100%;
+    /* İÇERİĞE GÖRE DEĞİŞECEĞİ İÇİN AUTO YAPTIK */
+    height: auto;
+    background-color: #f1f1f1;;
+    border-top-left-radius: 10px ;
+    border-top-right-radius: 10px ;
+    padding-left: 10px;
+    padding-top: 10px;
+    /* TAŞAN MENÜYÜ SECTİONA SIĞDIRDI */
+    overflow: auto;
+}
+nav{
+    width: 20%;
+    height: auto;
+    float: left;
+    margin-top: 10px;
+
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+    width: auto;
+ 
+}
+nav li{
+    list-style-type: none;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+nav li a{
+    text-decoration: none;
+    height: 40px;
+    color: black;
+    /* Border menüyü kaplasın yani uzun olsun diye block yaptık */
+    display: block;
+    line-height: 25px;
+    border-bottom: 1px solid darkgrey;
+}
+nav li a:hover{
+    background-color: #adadad;
+    color: white;
+}
+nav li i{
+    margin-right: 5px;
+}
+main{
+    float: left;
+    height: auto;
+    /* menüye 20% verdiğimiz için 80% yaptık */
+    width: 80%;
+    padding: 10px;
+}
+.içerik{
+    width: 45%;
+    height: auto;
+    /* satırda bide block özelliklerini(genişlik,yükseklik,margin vs) yansıtacak şekilde o yözden */
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    /* GÖLGELİK İÇİN */
+    box-shadow: 0 2px 8px 2px rgba(20, 23, 28, .15) ;
+    margin-bottom: 15px;
+}   
+.rsm{
+    width: 100%;
+    border-radius: 10px;  
+    transition: opacity 0.5s;
+}
+.rsm:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+h5{
+   color: dimgray;
+}
+.içerikText{
+    color: dimgray;
+}
+ .btnDevam:link{ 
+    /* BLOCK YAPTIKTAN SONRA GENİŞLİK ,YÜKSEKLİK FALAN VEREBİLİRİZ. */
+    display: block;
+    width: 150px;
+    height: 40px;
+    background-color: rgba(0, 42, 139, 0.448);
+    color:white;
+    text-align: center;
+    padding-top: 12px;
+    text-decoration: none;
+    border-radius: 10px;
+
+}
+.btnDevam:hover{
+    opacity: 0.8;
+}
+footer{
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+}
+main h1{
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px;
+    margin-top: 0;
+    box-shadow: 0 2px 8px 2px rgba(20, 23, 28, .15) ;
+
+}
+#hakkimizdaRsm{
+    float: left;
+    width: 350px;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 10px;
+    transition: opacity 0.9s;
+}
+#hakkimizdaRsm:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+main p{
+    color: #494949;
+    font-size: 15px;
+    margin-right: 15px;
+    text-indent: 30px;
+}
+.referans{
+    /* BİR SATIRA 3 TANE REFERANS KUTUSU SIĞMASINI İSTEDİĞİMİZ VE BOŞLUKLAR OLACAĞI İÇİN 33.3% YAPMADIK BOŞLUK OLACAĞI İÇİN 30 YAPTIK */
+    width: 30%;
+    height: 300px;
+    background-color: white;
+    /* kutular sola yaslı yani yanyana gelsin diye float */
+    float: left;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px 2px rgba(20, 23, 28, .15) ;
+}
+.refResim{
+    /* 100% yaparak yani genişliği divi kapsasın diyoruz dive sığsın diyoruz */
+    width: 100%;
+    height: 200px;
+    border-top-left-radius:10px ;
+    border-top-right-radius:10px;
+    transition: opacity 0.8s;
+}
+.refResim:hover{
+    opacity: 0.7;
+}
+.refBaşlik{
+    text-align: center;
+    color: #adadad;
+    background-color: #f1f1f1;
+    /* margin-top: 0; */
+    /* margin-top: -5px;     YAPARSAK RESİM İLE YAZI ARASINDAKİ BOŞLUK GİDER  */
+}
+.galeriRes{
+    width: 22%;
+    float: left;
+    height: 200px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px 2px rgba(20, 23, 28, .15) ;
+}
+.foto{
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    opacity: 0.8;
+    transition: opacity 0.8s;
+    object-fit: cover;
+}
+.foto:hover{
+    opacity: 1;
+    border: 6px solid white;
+}
+iframe{
+    width: 98%;
+    height: 350px;
+    border-radius: 10px;
+    margin-left: 10px;
+    box-shadow: 0 2px 8px 2px rgba(20, 23, 28, .15) ;
+}
+.section1{
+    width: 98%;
+    height: auto;
+    margin: auto;
+    margin-top: 10px;
+    background-color: #dbdbdb38;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+   
+}
+.form{
+    float: left;
+    padding: 10px;
+    background-color: #dbdbdb38;
+    width: 48%;
+    height: auto;
+    border-radius: 10px;
+    overflow: auto;
+    position: relative;
+    /* border: 1px solid white; */
+}
+.form .yazı1{
+    margin-left: 45px;
+    height: 40px;
+    width: 65%;
+    padding-left: 10px;
+}
+.form .yazı2{
+    margin-left: 22px;
+    height: 40px;
+    width: 65%;
+    padding-left: 10px;
+}
+.mesaj{
+    margin-left: 50px ;
+    float: right;
+    margin: 3px;
+    margin-bottom: 50px;
+    padding-top: 10px;
+}  
+
+.btn{
+   position: absolute;
+   bottom: 5px;
+   float: right; 
+   right: 10px;
+   margin-bottom: 10px;
+   color: white;
+   background-color: forestgreen;
+   border: forestgreen 1px solid;
+   border-radius: 5px;
+   padding:10px 20px;
+}
+ 
+.bilgi{
+    color: black;
+}
+input[type=text], textarea{
+    border: 1px solid #ccc;
+}
+.adres{
+    float: left;
+    padding: 10px;
+    background-color: #dbdbdb38;
+    width: 48%;
+    height: 362px;
+    border-radius: 10px;
+    margin-left: 10px; 
+}
+h2{
+    text-align: center;
+}
+.span1{
+    display: block;
+    letter-spacing: 1.5px;
+    text-align: center;
+    font-size: 18px;
+}
